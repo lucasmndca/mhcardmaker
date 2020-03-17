@@ -1,6 +1,5 @@
 window.onload = () => {
     preloadPages()
-    startDatabase()
 }
 //Elements
 
@@ -18,7 +17,11 @@ const form = {
     colOpen: `<div class="col-md-`,
     divClose: '</div>',
     inputOpen: '<input class="form-control" ',
-    tagClose: '>'
+    tagClose: '>',
+    selectOpen: '<select>',
+    optionOpen: '<option>',
+    optionClose: '</option>',
+    selectClose: '</select>'
 }
 
 const button = {
@@ -26,7 +29,8 @@ const button = {
     divClose: '</div>',
     buttonOpen: '<button class="btn btn-',
     iconOpen: '<span class="glyphicon glyphicon-',
-    iconClose: '"/>'
+    iconClose: '"/>',
+    closeButton: '</button>'
 }
 
 //Methods
@@ -102,8 +106,8 @@ const getInput = (type, placeholder, max, colSize, openRow, closeRow) => {
     let newCloseRow = null
     let min = ''
     type ? type = `type="${type}"` : null 
-    placeholder ? placeholder = `placeholder="${placeholder}"` : null 
-    colSize ? colSize = `${colSize}"` : colSize = '12"' 
+    placeholder ? placeholder = `placeholder="${placeholder}"` : null
+    colSize ? colSize = `${colSize}"` : colSize = '12"'
     openRow ? newRow = pageForm.rowOpen : newRow = ''
     closeRow ? newCloseRow = pageForm.divClose : newCloseRow = ''
     max ? max = `max=${max}` : null
@@ -142,7 +146,7 @@ const getButton = (buttonType, icon, isRowOpen, isRowClose, event) => {
         pageButton.iconOpen +
         icon +
         pageButton.iconClose +
-        '</button>' +
+        pageButton.closeButton +
         newCloseRow
     )
 }

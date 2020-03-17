@@ -20,15 +20,18 @@ const buildCard = () => {
 const buildContainer = card => {
     let target = document.getElementById('result')
     target.innerHTML =
-        container.openTag +
-        container.rowOpen +
-        container.colOpen +
+        container.openTag
+        + container.rowOpen
+        + container.colOpen
 
-        buildInnerCard(card) +
+        + buildInnerCard(card)
 
-        container.divClose +
-        container.divClose +
-        container.divClose
+        + container.divClose
+        + container.divClose
+
+        + buildCardButtonsContainer()
+
+        + container.divClose
 }
 
 const buildInnerCard = card => {
@@ -55,6 +58,32 @@ const buildInnerCard = card => {
     )
 }
 
+const buildCardButtonsContainer = () => {
+    return '<div class="CardButtonsContainer">'
+        + buildCardButtons()
+        + '</div>'
+}
+
+const buildCardButtons = () => {
+    return '<div style="margin: auto;width: 400px">' + getCardButtons('primary') + '</div>'
+}
+
+const getCardButtons = type => {
+    let icon = 'plus'
+    let buttonSpec = 'style="width: 100%;margin-top: 20px">'
+    type = type + '"'
+
+    return button.buttonOpen
+        + type 
+        + buttonSpec
+        + button.iconOpen
+        + icon
+        + button.iconClose
+        + '</span>'
+        + saveCard
+        + button.closeButton
+}
+
 const getData = () => {
     let inputFields = document.getElementsByTagName('input')
     let card = {
@@ -70,7 +99,7 @@ const getData = () => {
 }
 
 const getStars = amount => {
-    let stars = ''
+    let stars = []
     for (i = 0; i < amount; i++) {
         stars += '<div class="Star"><span class="glyphicon glyphicon-star" style="color: orange" /></div>'
     }

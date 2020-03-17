@@ -37,6 +37,8 @@ input {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-flow: row;
+    flex-wrap: wrap;
 }
 .Card {
     width: 400px;
@@ -137,6 +139,10 @@ input {
     width: calc(100% - 40px) !important;
     height: 32px !important;
     border: none;
+}
+
+.CardButtonsContainer {
+    width: 100%;
 }
 
 @keyframes slideBg {
