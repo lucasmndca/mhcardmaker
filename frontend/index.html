@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mhcardmaker</title>
+    <link rel="stylesheet" href="./app/assets/global.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+</head>
+
+<body ng-app="MhCardMaker">
+    <div ng-controller="mainController">
+        <navbar></navbar>
+        <ui-view></ui-view>
+        <app-footer></app-footer>
+    </div>
+
+    <script src="./node_modules/angular/angular.min.js"></script>
+    <script src="./app/modules/app.module..js"></script>
+    <script src="./app/controllers/main.controller.js"></script>
+    <script src="./app/components/navbar/navbar.component.js"></script>
+    <script src="./app/components/home/home.component.js"></script>
+    <script src="./app/components/home-cards-list/home-cards-list.component.js"></script>
+    <script src="./app/components/footer/footer.component.js"></script>
+    <script src="./app/components/cardmaker/cardmaker.component.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.29/angular-ui-router.min.js"
+        integrity="sha512-pqaTGP67/KI6BZh2w8MfiBDyn4CtkDMiSZrqtiV7KAcCWwnncwvUM3UDCecIAJH6BDL8/py0N1ka3rMI5+7+rg=="
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
