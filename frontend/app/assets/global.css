@@ -1,0 +1,19 @@
+body {
+    background-image: url('https://wallpapercave.com/wp/wp3615332.jpg');
+    background-position: cover;
+    background-repeat: no-repeat;
+}
+
+.app-footer {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    background-color: #fff;
+    padding: 16px;
+    width: 100%;
+    text-align: center;
+}
+
+.bottom-spacing {
+    margin-bottom: 50px;
+}
