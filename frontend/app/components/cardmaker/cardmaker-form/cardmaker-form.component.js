@@ -14,13 +14,15 @@ class CardMakerFormController {
                 attack: 'Attack',
                 defense: 'Defense',
                 create: 'Create',
-                cancel: 'Cancel'
+                cancel: 'Cancel',
+                preview: 'Preview'
             }
         };
         this.levels = [];
         this.types = [];
         this.elements = [];
         this.aliments = [];
+        this.card = {};
     }
 
     $onInit() {
@@ -91,9 +93,30 @@ class CardMakerFormController {
     create() {
         alert('oi')
     }
+
+    buildCard() {
+        const { card } = this;
+        return {
+            title: card.title && card.title != '' ? card.title : 'No title',
+            description: card.description,
+            coverUrl: card.coverUrl,
+            type: card.type,
+            level: card.level ?? 1,
+            element: card.element ? card.element.toLowerCase() : '',
+            aliment: card.aliment ? card.aliment.toLowerCase() : '',
+            attack: card.attack,
+            defense: card.defense
+        }
+    }
+
+    previewClick() {
+        const card = this.buildCard();
+        this.preview({ card });
+    }
 }
 
 app.component('cardmakerForm', {
+    bindings: { preview: '&' },
     templateUrl: 'app/components/cardmaker/cardmaker-form/cardmaker-form.component.html',
     controller: CardMakerFormController,
     controllerAs: 'vm'

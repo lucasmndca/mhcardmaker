@@ -25,9 +25,25 @@ body {
 }
 
 .card-body {
+    background: url('./card-body.jpg');
+}
+
+.card-body-blur {
+    background: url('./card-body-blur.jpg');
+}
+
+.card-body-blur-cta {
+    font-weight: 800;
+    font-size: 1.5em;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+}
+
+.card-body,
+.card-body-blur {
     width: 350px;
     height: 500px;
-    background: url('./card-body.jpg');
     background-size: 100% 100%;
     box-shadow: 0px 0px 5px #666;
     padding: 12px 24px;
@@ -61,6 +77,51 @@ body {
     font-weight: 200;
 }
 
+.card-level-container {
+    width: 98%;
+    max-height: 24px;
+    margin-top:4px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card-level {
+    width: 20px;
+    height: 20px;
+    background: url('./star.png');
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin-left: 2px;
+}
+
+
+.card-cover-container {
+    width: 100%;
+    height: 262px;
+    margin-top: 8px;
+    padding: 0px 17px;
+}
+
+.card-cover {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: grey;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-description-container {
+    width: 100%;
+    height: 100px;
+    background: red;
+    margin-top: 21px;
+    padding: 0px 10px;
+}
+
 .water {
     background-size: 100% 100%;
     background: url('./water.jpg');
@@ -78,7 +139,7 @@ body {
 
 .thunder {
     background-size: 100% 100%;
-    background: url('./thunder.png');
+    background: url('./thunder.jpg');
 }
 
 .dragon {

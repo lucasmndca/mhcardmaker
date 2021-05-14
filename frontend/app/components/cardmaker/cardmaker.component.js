@@ -1,6 +1,10 @@
 class CardMakerController {
     constructor() {
+        this.card;
+    }
 
+    preview(card) {
+        this.card = card;
     }
 }
 

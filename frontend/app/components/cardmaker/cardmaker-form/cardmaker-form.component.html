@@ -2,15 +2,18 @@
 <p>{{vm.constants.description}}</p>
 <div class="input-group input-group-md">
     <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.title}}</span>
-    <input type="text" class="form-control" placeholder="My Custom Fire Tigrex 2.0" aria-describedby="sizing-addon1">
+    <input type="text" class="form-control" ng-model="vm.card.title" placeholder="My Custom Fire Tigrex 2.0"
+        aria-describedby="sizing-addon1">
 </div>
 <div class="input-group input-group-md">
     <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.description}}</span>
-    <input type="text" class="form-control" placeholder="This powerful monster can spit balls of fire! =)" aria-describedby="sizing-addon1">
+    <input type="text" class="form-control" ng-model="vm.card.description"
+        placeholder="This powerful monster can spit balls of fire! =)" aria-describedby="sizing-addon1">
 </div>
 <div class="input-group input-group-md">
     <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.coverUrl}}</span>
-    <input type="text" class="form-control" placeholder="http://mycustomcover.com/file/123" aria-describedby="sizing-addon1">
+    <input type="text" class="form-control" ng-model="vm.card.coverUrl" placeholder="http://mycustomcover.com/file/123"
+        aria-describedby="sizing-addon1">
 </div>
 
 <!-- Type and level -->
@@ -18,7 +21,7 @@
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.type}}</span>
-            <select name="card-type" id="card-type" class="form-control" id="sizing-addon1">
+            <select name="card-type" id="card-type" ng-model="vm.card.type" class="form-control" id="sizing-addon1">
                 <option ng-repeat="type in vm.types" value="{{type}}">{{type}}</option>
             </select>
         </div>
@@ -26,7 +29,7 @@
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.level}}</span>
-            <select name="card-type" id="card-type" class="form-control" id="sizing-addon1">
+            <select name="card-type" id="card-type" ng-model="vm.card.level" class="form-control" id="sizing-addon1">
                 <option ng-repeat="level in vm.levels" value="{{level}}">{{level}}</option>
             </select>
         </div>
@@ -38,7 +41,7 @@
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.element}}</span>
-            <select name="card-type" id="card-type" class="form-control" id="sizing-addon1">
+            <select name="card-type" id="card-type" ng-model="vm.card.element" class="form-control" id="sizing-addon1">
                 <option ng-repeat="elem in vm.elements" value="{{elem}}">{{elem}}</option>
             </select>
         </div>
@@ -46,7 +49,7 @@
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.aliment}}</span>
-            <select name="card-type" id="card-type" class="form-control" id="sizing-addon1">
+            <select name="card-type" id="card-type" ng-model="vm.card.aliment" class="form-control" id="sizing-addon1">
                 <option ng-repeat="alim in vm.aliments" value="{{alim}}">{{alim}}</option>
             </select>
         </div>
@@ -58,16 +61,28 @@
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.attack}}</span>
-            <input type="number" max="9999"  min="0" class="form-control" placeholder="0" aria-describedby="sizing-addon1">
+            <input type="number" max="9999" min="0" ng-model="vm.card.attack" class="form-control" placeholder="0"
+                aria-describedby="sizing-addon1">
         </div>
     </div>
     <div class="col-md-6">
         <div class="input-group input-group-md">
             <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.defense}}</span>
-            <input type="number" max="9999"  min="0" class="form-control" placeholder="0" aria-describedby="sizing-addon1">
+            <input type="number" max="9999" min="0" ng-model="vm.card.defense" class="form-control" placeholder="0"
+                aria-describedby="sizing-addon1">
         </div>
     </div>
 </div>
 
-<button class="btn btn-success" ng-click="vm.create()">{{vm.constants.form.create}}</button>
-<button class="btn btn-danger" ui-sref="home">{{vm.constants.form.cancel}}</button>
+<button class="btn btn-success" ng-click="vm.create()">
+    <span class="glyphicon glyphicon-modal-window" aria-hidden="true"></span>
+    {{vm.constants.form.create}}
+</button>
+<button class="btn btn-danger" ui-sref="home">
+    <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+    {{vm.constants.form.cancel}}
+</button>
+<button class="btn btn-primary" ng-click="vm.previewClick()">
+    <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+    {{vm.constants.form.preview}}
+</button>
