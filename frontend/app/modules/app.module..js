@@ -1,6 +1,6 @@
 const app = angular.module('MhCardMaker', ['ui.router']);
 
-app.config(function ($stateProvider, $urlRouterProvider) {
+app.config(($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
