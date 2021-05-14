@@ -1,0 +1,29 @@
+<h2 ng-if="vm.showTitle === true">Preview</h2>
+<p ng-if="vm.showTitle === true">This is what your card currently looks like.</p>
+
+<!-- The card -->
+<div ng-if="vm.card && vm.card !== undefined" class="card-container">
+    <div class="card-body">
+        <div class="card-title-container">
+            <div class="card-title">{{vm.card.title}}</div>
+            <div class="card-element {{vm.card.element}}">{{vm.card.element}}</div>
+        </div>
+        <div class="card-level-container">
+            {{vm.getCardLevel()}}
+            <div ng-repeat="star in vm.amountOfStars" class="card-level"></div>
+        </div>
+        <div class="card-cover-container">
+            <div class="card-cover" style="background-image: url('{{vm.card.coverUrl}}');"></div>
+        </div>
+        <div class="card-description-container">a
+        </div>
+
+    </div>
+</div>
+
+<!-- The blurred card -->
+<div ng-if="!vm.card && vm.card === undefined" class="card-container">
+    <div class="card-body-blur">
+        <div class="card-body-blur-cta">Click 'Preview' to see</div>
+    </div>
+</div>

@@ -1,7 +1,14 @@
 <div class="container">
     <div class="panel panel-default">
         <div class="panel-body">
-            Basic panel example
+            <div class="row">
+                <div class="col-md-6">
+                    <cardmaker-form preview="vm.preview(card)"></cardmaker-form>
+                </div>
+                <div class="col-md-6">
+                    <cardmaker-preview card="vm.card"></cardmaker-preview>
+                </div>
+            </div>
         </div>
     </div>
 </div>

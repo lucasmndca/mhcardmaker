@@ -1,6 +1,6 @@
 class FooterController {
     constructor() {
-        this.creationYear = '2021';
+        this.creationYear = '2019';
     }
 
     getFooterDates() {
