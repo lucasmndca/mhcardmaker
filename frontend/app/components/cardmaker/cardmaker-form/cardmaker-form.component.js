@@ -103,7 +103,7 @@ class CardMakerFormController {
             type: card.type,
             level: card.level ?? 1,
             element: card.element ? card.element.toLowerCase() : '',
-            aliment: card.aliment ? card.aliment.toLowerCase() : '',
+            aliment: card.aliment ?? '',
             attack: card.attack,
             defense: card.defense
         }

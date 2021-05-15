@@ -15,7 +15,16 @@
         <div class="card-cover-container">
             <div class="card-cover" style="background-image: url('{{vm.card.coverUrl}}');"></div>
         </div>
-        <div class="card-description-container">a
+        <div class="card-description-container">
+            <small>
+                <strong>
+                    [{{vm.card.type}}
+                    <span ng-if="vm.card.aliment"> / {{vm.card.aliment}}</span>]
+                </strong>
+                <p>{{vm.card.description}}</p>
+            </small>
+            <div class="card-attack">{{vm.card.attack}}</div>
+            <div class="card-defense">{{vm.card.defense}}</div>
         </div>
 
     </div>
