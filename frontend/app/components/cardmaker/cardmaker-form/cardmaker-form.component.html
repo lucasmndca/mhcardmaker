@@ -2,10 +2,10 @@
 <p>{{vm.constants.description}}</p>
 <div class="input-group input-group-md">
     <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.title}}</span>
-    <input type="text" class="form-control" maxlength="32" ng-model="vm.card.title" placeholder="My Custom Fire Tigrex 2.0"
-        aria-describedby="sizing-addon1">
+    <input type="text" class="form-control" maxlength="32" ng-model="vm.card.title"
+        placeholder="My Custom Fire Tigrex 2.0" aria-describedby="sizing-addon1">
 </div>
-<div class="input-group input-group-md">
+<div class="input-group input-group-md" data-toggle="tooltip" data-placement="left" title="Max 128 characters">
     <span class="input-group-addon" id="sizing-addon1">{{vm.constants.form.description}}</span>
     <input type="text" class="form-control" maxlength="128" ng-model="vm.card.description"
         placeholder="This powerful monster can spit balls of fire! =)" aria-describedby="sizing-addon1">

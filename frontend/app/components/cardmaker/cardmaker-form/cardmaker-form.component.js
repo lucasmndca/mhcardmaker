@@ -30,6 +30,8 @@ class CardMakerFormController {
         this.fillType();
         this.fillElements();
         this.fillAliments();
+
+        $('[data-toggle="tooltip"]').tooltip();
     }
 
     fillLevels() {
