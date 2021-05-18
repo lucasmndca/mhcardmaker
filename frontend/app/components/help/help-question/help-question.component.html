@@ -1,0 +1,9 @@
+<div class="panel panel-info">
+    <div class="panel-heading">{{vm.question.title}}</div>
+    <div class="panel-body">
+        <p>{{vm.question.body}}</p>
+        <ul ng-if="vm.question.list && vm.question.list.length > 0">
+            <li ng-repeat="item in vm.question.list">Power: {{item.itemKey}} ........... {{item.value}}</li>
+        </ul>
+    </div>
+</div>

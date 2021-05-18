@@ -1,0 +1,15 @@
+{
+  "name": "mhcardmaker-frontend",
+  "version": "2.0.0",
+  "description": "A simple Monster hunter card maker where Yugioh and Monster Hunter merge.",
+  "main": "app/modules/app.module.js",
+  "dependencies": {
+    "angular": "^1.8.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Lucas Mendonça Dias",
+  "license": "ISC"
+}
