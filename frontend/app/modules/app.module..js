@@ -14,6 +14,6 @@ app.config(($stateProvider, $urlRouterProvider) => {
         })
         .state('help', {
             url: '/help',
-            templateUrl: 'app/components/home/home.component.html'
+            template: '<help></help>'
         });
 })
