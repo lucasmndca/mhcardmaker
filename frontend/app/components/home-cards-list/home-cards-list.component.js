@@ -1,5 +1,13 @@
 class HomeCardsListController {
-    constructor() {
+    constructor(cardService) {
+        this.existingCards = [];
+        
+        this.getExistingCards(cardService)
+    }
+
+    async getExistingCards(cardService) {
+        await cardService.getExistingCards().then((res) => this.existingCards = res);
+        console.log(this.existingCards);
     }
 }
 
