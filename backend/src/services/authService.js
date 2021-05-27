@@ -1,3 +1,5 @@
+import { JsonDB } from 'node-json-db';
+import { Config } from 'node-json-db/dist/lib/JsonDBConfig';
 import { LoginResponse } from "../responses/auth/loginResponse";
 import { LogoutResponse } from "../responses/auth/logoutResponse";
 
@@ -29,5 +31,16 @@ export class AuthService {
 
     static logout() {
         return new LogoutResponse(true);
+    }
+
+
+    static createUser({ targetUser }) {
+        const db = new JsonDB(new Config("database", true, true, '/'));
+        const lastId = db.getData("/users/lastId");
+        
+        db.push(`/users/${lastId + 1}`, targetUser);
+        db.push("/users/lastId", lastId + 1);
+
+        return true;
     }
 }
