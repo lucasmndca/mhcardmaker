@@ -4,8 +4,12 @@ app.config(($stateProvider, $urlRouterProvider) => {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
-        .state('home', {
+        .state('login', {
             url: '/',
+            template: '<login></login>'
+        })
+        .state('home', {
+            url: '/home',
             template: '<home></home>'
         })
         .state('maker', {

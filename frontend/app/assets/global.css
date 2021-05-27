@@ -20,6 +20,10 @@ body {
     margin-bottom: 50px;
 }
 
+.top-spacing {
+    margin-top: 50px;
+}
+
 .input-group {
     margin-bottom: 24px;
 }
@@ -177,4 +181,10 @@ body {
 .light {
     background-size: 100% 100%;
     background-color: #ddd;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
