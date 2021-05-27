@@ -1,11 +1,17 @@
 class NavbarController {
     constructor() {
         this.title = 'mhcardmaker',
-        this.pages = {
-            home: 'Home',
-            maker: 'Maker',
-            help: 'Help'
-        }
+            this.pages = {
+                home: 'Home',
+                maker: 'Maker',
+                help: 'Help',
+                profile: 'My profile'
+            },
+            this.actions = {
+                login: 'Login',
+                logout: 'Logout'
+            },
+            this.session = {authenticated: false}
     }
 }
 
